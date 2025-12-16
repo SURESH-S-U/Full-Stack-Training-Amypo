@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form - Format</title>
+</head>
+
+<body>
+    <center><h1>Registration Form</h1></center>
+
+    <form action="">
+        <h2>Enter your Details</h2>
+
+        <!-- For attribute is important , because it matches the lable with the id virtually not visually.
+             The label must be before the input.
+             If we click the Lable , it direct to the input field.
+          -->
+
+        <label for="first-name">First Name : </label>
+        <input type="text" name="first-name" id="first-name">
+        <br>
+
+        <label for="last-name">Last Name : </label>
+        <input type="text" name="last-name" id="last-name">
+        <br>
+
+        <!-- All Radio element must have the same name (like gender). So it all are comes under same radio.
+             Only one radio element can be select among all unlike CheckBox. -->
+        <input type="radio" name="gender" id="male">
+        <label for="gender">Male</label>
+        <br>
+
+        <input type="radio" name="gender" id="female">
+        <label for="gender">Female</label>
+        <br>
+
+        <input type="radio" name="gender" id="sharan">
+        <label for="sharan">Sharan (Others)</label>
+        <br>
+
+    </form>
+</body>
+</html>
