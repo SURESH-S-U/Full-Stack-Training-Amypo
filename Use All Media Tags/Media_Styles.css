@@ -1,5 +1,8 @@
 body {
     background-color: black;
+    background-image: url(https://png.pngtree.com/background/20250207/original/pngtree-soft-pastel-floral-design-light-blue-background-picture-image_16257054.jpg);
+    background-size: 100%;
+    background-attachment: fixed;
     margin: 0;
 }
 
@@ -8,9 +11,15 @@ h1, h3 {
     text-align: center;
 }
 
+h1 {
+    -webkit-text-stroke: 1px black;
+}
+
 #heading1 {
-    background-color: aquamarine;
+    background-color: greenyellow;
     padding: 25px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px 2px red;
 }
 
 /* FLEX CONTAINER */
@@ -29,6 +38,7 @@ h1, h3 {
     background-color: #4d4c4c;
     padding: 15px;
     border-radius: 10px;
+    border: 10px solid greenyellow;
 }
 
 /* MEDIA SIZE FIX */
