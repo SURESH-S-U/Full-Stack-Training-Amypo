@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boot Strap Training</title>
+
+    <!-- Itegrate BootStrap for css-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <!-- Itegrate BootStrap for js-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+</head>
+
+
+<body>
+
+    <!-- All Classes in Bootstrap are Responsive. We dont want to make it responsive. -->
+
+    <!-- This container class is predefined in Bootstrap. (Margin left and Right) -->
+    <div class="container">
+        <center><h1>Bannari Amman Institute Of Technology</h1></center>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium officia nesciunt laborum eius ex aut nam amet optio esse minus. Dolores quod nesciunt omnis unde, tenetur doloremque deserunt ducimus excepturi iusto at doloribus sapiente asperiores ipsa voluptatem? Dicta, magnam architecto illum inventore earum reiciendis eligendi itaque tenetur accusamus! Vero iusto nostrum voluptatibus voluptate magnam aut. Tempora hic atque maiores soluta cum iure voluptates laborum quae voluptas repellendus facere ratione natus voluptatum inventore corporis ea ipsum quaerat officia, nulla obcaecati voluptate cumque veniam perspiciatis dolores? Ullam nihil in voluptates aspernatur, et unde modi mollitia officia, animi iste eius veritatis, dignissimos error?</p>
+    </div>
+
+    <!-- This container-fluid class is predefined in Bootstrap. (Minimal Margin left and Right) -->
+    <div class="container-fluid">
+        <center><h1>Bannari Amman Institute Of Technology</h1></center>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laudantium officia nesciunt laborum eius ex aut nam amet optio esse minus. Dolores quod nesciunt omnis unde, tenetur doloremque deserunt ducimus excepturi iusto at doloribus sapiente asperiores ipsa voluptatem? Dicta, magnam architecto illum inventore earum reiciendis eligendi itaque tenetur accusamus! Vero iusto nostrum voluptatibus voluptate magnam aut. Tempora hic atque maiores soluta cum iure voluptates laborum quae voluptas repellendus facere ratione natus voluptatum inventore corporis ea ipsum quaerat officia, nulla obcaecati voluptate cumque veniam perspiciatis dolores? Ullam nihil in voluptates aspernatur, et unde modi mollitia officia, animi iste eius veritatis, dignissimos error?</p>
+    </div>
+
+    <div class="container">
+        <!-- row class is used to create a new Block with start with new line.
+             if we give N number of columns inside the row i will create n number of flex items inside this.
+         -->
+        
+        <!-- This all class name Must be Exact in the Bootstrap Class -->
+
+         <div class="row"> <!-- create New block -->
+
+            <div class="col"> <!-- Create a Column -->
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum beatae voluptatum consequuntur sunt nihil, fuga sit velit. Voluptatem expedita repellendus commodi maxime assumenda  Aliquam porro magni velit eos!</p>
+            </div>
+            
+            <div class="col">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum beatae voluptatum consequuntur sunt nihil, fuga sit velit. Voluptatem expedita repellendus commodi maxime assumenda  Aliquam porro magni velit eos!</p>
+            </div>
+            
+            <div class="col">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum beatae voluptatum consequuntur sunt nihil, fuga sit velit. Voluptatem expedita repellendus commodi maxime assumenda  Aliquam porro magni velit eos!</p>
+            </div>
+            
+        </div>
+
+    </div>
+
+
+
+
+
+
+    <!-- Recreating Bitsathy web page -->
+
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col">
+                <img src="/images/bit1.jpg" alt="" width="400px" height="300px">
+            </div>
+            <div class="col">
+                <h1>About the Campus</h1>
+                <p>Bannari Amman Institute of Technology is an Autonomous, Self-financing Engineering College, Approved by AICTE, New Delhi and Affiliated to Anna University, Chennai. Nestled on the banks of The River Bhavani, BIT campus provides environment for learning in harmony with nature, away from the odds of the city life. The spacious and the earth hugging buildings punctuated with landscaped courtyards and pathways are designed to emphasise the business ethics and or characteristics of an excellent centre for learning. The Campus hosts well planned academic blocks, computer centres, lecture halls, libraries, laboratories, conference halls, staff quarters, hostels and students' centres. The Campus also houses a co-operative store, ATM (Axis, SBI and KVB) and a clinic to attend to the general health of the students and staff.</p>
+            </div>
+            <div class="col">
+                <img src="/images/bit2.jpg" alt="">
+                <br><br>
+                <p>ZOHO, CEO, திரு. ஸ்ரீதர் வேம்புவின், பண்ணாரி அம்மன் இன்ஸ்டிட்யூட் ஆஃப் டெக்னாலஜி (BIT) கல்லூரி பற்றி உற்சாகமூட்டும் வார்த்தைகள்.</p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- If we need to create a Column with different size.
+     we can we Class name with Size.
+     The Browser Consider The row size as "12".
+     We can Split based on that.
+     ex. col-6   col-6
+     ex. col-8   col-4
+     ex. col-6   col-4   col-2 -->
+
+    <div class="container">
+
+        <center><h1>Resize col length</h1></center>
+
+        <center><h2>Row 1   (8,4)</h2></center>
+        <div class="row"> <!-- row 1 -->
+            <div class="col-8">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod iste dolorum voluptas beatae tempore, pariatur veritatis deleniti ducimus illum magni nulla fugit id eius quis officiis quas unde. Qui, consequatur.</p>
+            </div>
+
+            <div class="col-4">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod iste dolorum voluptas beatae tempore, pariatur veritatis deleniti ducimus illum magni nulla fugit id eius quis officiis quas unde. Qui, consequatur.</p>
+            </div>
+
+        </div>
+
+        <center><h2>Row 2    (6,4,2)</h2></center>
+        <div class="row"> <!-- row 2 -->
+            <div class="col-6">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod iste dolorum voluptas beatae tempore, pariatur veritatis deleniti ducimus illum magni nulla fugit id eius quis officiis quas unde. Qui, consequatur.</p>
+            </div>
+
+            <div class="col-4">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod iste dolorum voluptas beatae tempore, pariatur veritatis deleniti ducimus illum magni nulla fugit id eius quis officiis quas unde. Qui, consequatur.</p>
+            </div>
+
+            <div class="col-2">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod iste dolorum voluptas beatae tempore, pariatur veritatis deleniti ducimus illum magni nulla fugit id eius quis officiis quas unde. Qui, consequatur.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+    <!-- Nested Column -->
+
+    <div class="container">
+
+        <center><h1>Nested Column (Column 2 is nested) </h1></center>
+        <center><h2>(4,8)  -> the second will divided into (6,6) half </h2></center>
+        <br><br>
+        <div class="row">
+
+            <div class="col"> <!-- col 1 -->
+                <center><h3>col 1</h3></center>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos dolore sit saepe reiciendis ex ratione facere labore quasi aspernatur nobis.</p>
+            </div>
+
+            <div class="col"> <!-- col 2 ....... It will be divided into 2 columns--> 
+                <center><h3>col2</h3></center>
+                
+                <div class="row">  <!-- Again it will be create 1 row for nested -->
+
+                    <div class="col">
+                        <center><h4>sub 2.1</h4></center>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis, corporis.</p>
+                    </div>
+
+                    <div class="col">
+                        <center><h4>sub 2.2</h4></center>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Blanditiis, corporis.</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <br><br><br><br><br>
+
+
+
+    <!-- Display Tags (Used to Enhance the size and Differentiate the text)-->
+    <!-- Display tags also have sizes like h tag -->
+    <!-- We can also use h1 tag as Class type -->
+
+    <div class="container">
+
+        <center><div class="h1">Welcode</div> <!--It will use h1 tag's Properties--></center>
+        
+        <!-- Sizes of display tags -->
+        <div class="h3">Display tag sizes</div>
+        <div class="display-1">Hello</div>
+        <div class="display-2">Hello</div>
+        <div class="display-3">Hello</div>
+        <div class="display-4">Hello</div>
+        <div class="display-5">Hello</div>
+        <div class="display-6">Hello</div>
+
+        <div class="mark">Welcome</div>  <!-- Used to Highlight -->
+
+        <br><br><br>
+
+        <!-- Span Tag is used to Highlight or Change Properties whithin another tag properties (Change color of my name only)-->
+         <center><h1>Welcome to <span style="color: gold;">Sura</span> web page</h1></center>
+
+         <br><br><br><br>
+
+    </div>
+
+
+
+    <!-- Color Formats -->
+
+    <div class="container">
+
+        <center><h1>Color formats</h1></center>
+        <h2>2 types -----> text , bg (background)</h2>
+        <div class="mark"><h3>Text - formats</h3></div>
+
+        <!-- Below are Text colors -->
+        <p class="text-primary">Welcome to my page</p>
+        <p class="text-secondary">Welcome to my page</p>
+        <p class="text-success">Welcome to my page</p>
+        <p class="text-warning">Welcome to my page</p>
+        <!-- Others : 
+        text-primary	Blue
+        text-secondary	Gray
+        text-success	Green
+        text-danger	Red
+        text-warning	Yellow
+        text-info	Cyan
+        text-light	Light (white-ish)
+        text-dark	Dark (black-ish)
+        text-muted	Muted gray
+        text-white	White
+        text-black	Black 
+        -->
+
+        <br><br><br><br>
+
+        <!-- Below Are Background colors -->
+        <div class="mark"><h3>Bg - formats</h3></div>
+
+        <p class="bg-primary">Welcome to my page</p>
+        <p class="bg-secondary">Welcome to my page</p>
+        <p class="bg-success">Welcome to my page</p>
+        <p class="bg-warning">Welcome to my page</p>
+
+        <!-- 
+        Class	Color
+        bg-primary	Blue
+        bg-secondary	Gray
+        bg-success	Green
+        bg-danger	Red
+        bg-warning	Yellow
+        bg-info	Cyan
+        bg-light	Light
+        bg-dark	Dark
+        bg-white	White
+        bg-black	Black
+        bg-transparent	Transparent
+        -->
+
+
+        <!-- We can apply Multiple Classes in the same tag in Bootstrap (Using space between 2 class names)-->
+            <h4>Using Multiple classes (Bg and text in same tag)</h4>
+            <p class="bg-danger text-success">Welcome to my page</p>
+
+        <br><br><br><br><br>
+
+    </div>
+
+
+
+
+
+
+
+    <!-- Tablw Fromats -->
+
+    <div class="mark"><center><h1>Table Fromat</h1></center></div>
+    <br><br>
+
+    <div class="container">
+
+
+        <!-- Normal Table -->
+
+        <div class="row">
+            <h3 class="mark">Normal Table</h3>
+
+            <table>
+                <tr>
+                    <th>S.No</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>suresh</td>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>suresh</td>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>suresh</td>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>suresh</td>
+                    <td>20</td>
+                </tr>
+            </table>
+        </div>
+
+
+        <br><br><br><br><br>
+
+
+
+        <!-- Table with class : table        (Aligned Properly) -->
+
+        <div class="row">
+            <h3 class="mark">Table with class : table</h3>
+
+            <table class="table">
+                <tr>
+                    <th>S.No</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>suresh</td>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>suresh</td>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>suresh</td>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>suresh</td>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>suresh</td>
+                    <td>20</td>
+                </tr>
+            </table>
+        </div>
+
+
+        <br><br><br><br><br>
+
+
+
+        <!-- Table with class : table table-bordered        (Aligned Properly with borderes) -->
+
+        <div class="row">
+            <h3 class="mark">Table with - class : table table-bordered</h3>
+
+            <table class=" table table-bordered">
+                <tr>
+                    <th>S.No</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>suresh</td>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>suresh</td>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>suresh</td>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>suresh</td>
+                    <td>20</td>
+                </tr>
+            </table>
+        </div>
+
+
+        <br><br><br><br><br>
+
+
+        <!-- Table with class : table table-striped       (Aligned Properly with stripes in alternate roews) -->
+
+        <div class="row">
+            <h3 class="mark">Table with - class : table table-striped</h3>
+
+            <table class=" table table-striped">
+                <tr>
+                    <th>S.No</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>suresh</td>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>suresh</td>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>suresh</td>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>suresh</td>
+                    <td>20</td>
+                </tr>
+            </table>
+        </div>
+
+
+
+        <br><br><br><br>
+
+
+        <!-- Table with class : table table-hover        (Aligned Properly with hover effect when point the mouse over the row) -->
+
+        <div class="row">
+            <h3 class="mark">Table with - class : table table-hover</h3>
+
+            <table class=" table table-hover">
+                <tr>
+                    <th>S.No</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>suresh</td>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>suresh</td>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>suresh</td>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>suresh</td>
+                    <td>20</td>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+
+    <br><br><br><br><br>
+
+
+
+
+
+    
+
+    <!-- Button formats -->
+
+
+    <center><h1 class="mark">Button format</h1></center>
+    <br><br>
+     
+    <center><button class="btn">Submit</button>   <!-- In normal button we have to give properties like border , margin ... But in bootstrap We can use btn class. -->
+    <button class="btn bg-success"> Accept </button>
+    <button class="btn bg-danger"> Reject </button></center>
+
+    <br><br><br><br><br>
+
+
+
+
+
+    <!-- Forms Format -->
+
+
+    <center><h1 class="mark">Form Format</h1></center>
+
+    <div class="container">
+
+        <div class="row justify-content-center">
+            <div class="col-6">
+
+                <form action="">
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Username</label>
+                        <input type="text" class="form-control" required />
+                    </div>
+                      <div class="mb-3">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" class="form-control" required />
+                    </div>
+                    <div>
+                        <button type="submit" class="btn bg-info">Submit</button>
+                    </div>
+                    <br>
+                    <div class="mb-3">
+                        <input type="checkbox" class="form-check-input">
+                        <label for="terms" class="form-check-label"> &nbsp;I agree with the terms & conditions.</label>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+    <!-- Image Format -->
+
+    <div class="container">
+
+        <div class="row" >
+
+            <!-- If we use class : img-fluid ... it wont overlap or exceed the size. And it will be responsive. -->
+
+            <div class="col">
+                <img src="/images/bit1.jpg" alt="bit.jpg"  class="img-fluid">
+            </div>
+
+            <div class="col">
+                <img src="/images/bit2.jpg" alt="sridhar-vembu.jpg" class="img-fluid">
+            </div>
+
+        </div>
+
+    </div>
+
+    
+</body>
+
+</html>
