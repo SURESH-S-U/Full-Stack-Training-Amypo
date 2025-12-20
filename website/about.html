@@ -22,7 +22,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
+                <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
                         <a class="nav-link" aria-current="page" href="index.html">Home</a>
                     </li>
@@ -43,6 +43,158 @@
 
 
 
+
+
+    <!-- About Page Contents -->
+
+    <div class="container">
+
+        <!-- Breadcrumb code (Home / About) -->
+
+        <nav aria-label="breadcrumb" class="mt-4">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="/website/index.html">Home</a></li>
+                <li class="breadcrumb-item"><a href="/website/contact.html">Contact</a></li>
+                <li class="breadcrumb-item active" aria-current="page">About</li>
+            </ol>
+        </nav>
+
+        <h1>About Our Internship Program</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus labore illum veniam qui vero, soluta quam cumque modi minima ipsa?</p>
+
+
+        <!-- Cards -->
+
+        <div class="row mt-4">
+
+            <div class="col-6 card m-3">
+                <h5>Frontend Focus</h5>
+                <p>Lorem ipsum dolor sit amet consectetur Lorem ipsum dolor sit amet Lorem ipsum dolor sit amet.</p>
+            </div>
+
+            <div class="col-5 card m-3">
+                <h5>Frontend Focus</h5>
+                <p>Lorem ipsum dolor sit ame Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sequi, aliquam?</p>
+            </div>
+
+        </div>
+
+
+        <!-- Table and Progress Chart row -->
+
+        <div class="row mt-4">
+
+            <!-- Table  Column -->
+            <div class="col-8">
+                <h3>What Interns Will Practice</h3>
+
+                <!-- Table code -->
+                <table class="table table-bordered">
+                    <tr>
+                        <th class="bg-dark text-light">Topic</th>
+                        <th class="bg-dark text-light">Status</th>
+                    </tr>
+                    <tr>
+                        <td>Bootstrap Grid</td>
+                        <td><span class="badge bg-success">Completed</span></td>
+                    </tr>
+                    <tr>
+                        <td>Components</td>
+                        <td><span class="badge bg-warning">In Progress</span></td>
+                    </tr>
+                    <tr>
+                        <td>Responsive Layout</td>
+                        <td><span class="badge bg-info">Upcoming</span></td>
+                    </tr>
+                </table>
+            </div>
+
+
+            <!-- Progress Chart -->
+            <!-- Progress Chart code got from Bootstrap (Progress) -->
+            <div class="col-4  ">
+
+                <h3>Learning Progress</h3>
+
+                <label for="progress" class="form-label">HTML</label>
+                <div class="progress" role="progressbar" aria-label="Success example" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar text-bg-success" style="width: 80%">80%</div>
+                </div>
+
+                <label for="progress" class="form-label mt-3">BootStrap</label>
+                <div class="progress" role="progressbar" aria-label="Info example" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+                    <div class="progress-bar text-bg-info" style="width: 20%">20%</div>
+                </div>
+
+            </div>
+
+        </div>
+        <!-- row End -->
+
+
+
+        <!-- Mission Vision division -->
+        <div class="badge bg-primary p-3 mt-4">Mission</div>
+        <div class="badge text-primary p-3 ms-2">Vision</div>
+
+        <p class="mt-3">Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda, provident.</p>
+
+
+
+        <!-- Accordion Content (Code Got From BootStrap (Accordion)) -->
+        <div class="mt-5">
+            <h3>Frequently Asked Questions</h3>
+
+            <!-- Accordion Code -->
+
+            <div class="accordion mt-3" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                        Question #1
+                    </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <strong>This is the first item’s accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It’s also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                    </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        Question #2
+                    </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <strong>This is the second item’s accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It’s also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                    </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        Question #3
+                    </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <strong>This is the third item’s accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It’s also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                    </div>
+                    </div>
+                </div>
+
+            </div>
+        
+        </div>
+
+
+    </div>
+
+
+
+
     
     <!-- Footer Section -->
     
@@ -51,7 +203,7 @@
         <!-- Container Fluid For Footer gives margin inside the footer. Footer Must be cover full page size. -->
         <div class="container-fluid">
 
-            <div class="row">
+            <div class="row pt-4">
 
                 <!-- col 1 for Text -->
                 <div class="col text-center"> 
