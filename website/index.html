@@ -20,22 +20,22 @@
     
     <!-- Navbar Starts -->
     <!-- Navbar Bring from Bootstrap website (Nav) -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">My Website</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
+                <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
+                        <a class="nav-link" href="about.html">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contact</a>
+                        <a class="nav-link" href="contact.html">Contact</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link disabled" aria-disabled="true">Login</a>
@@ -101,11 +101,12 @@
     <!-- Container Fluid Ended -->
 
 
+
     <!-- Container starts for Body contents -->
-     <div class="container mt-4">
+    <div class="container mt-4">
 
 
-        <!-- Alert section -->                                                                <!--badge is used for highlight with box with radius-->
+        <!-- Alert section -->                         <!--badge is used for highlight with box with radius-->
         <div class="alert alert-success text-dark">
             BIT students Got 1st place in <span class="badge bg-success">Smart India Hackathon</span>
         </div>
@@ -119,8 +120,125 @@
 
         </div>
 
-     </div>
-     <!-- Container Ends -->
+
+        <!-- Card Starts (Took From BootStrap) -->
+        <div class="row m">  <!-- Card Row -->
+
+            <!-- Card 1 -->
+            <div class="col m-3">
+
+                <div class="card" style="width: 18rem;">
+                    <img src="https://placehold.co/280x140" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+                
+            </div>
+
+            <!-- Card 2 -->
+            <div class="col m-3"> 
+
+                <div class="card" style="width: 18rem;">
+                    <img src="https://placehold.co/280x140" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col m-3">
+
+                <div class="card" style="width: 18rem;">
+                    <img src="https://placehold.co/280x140" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Card 4 -->
+            <div class="col m-3">
+
+                <div class="card" style="width: 18rem;">
+                    <img src="https://placehold.co/280x140" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <!-- Container Ends -->
+
+
+    
+    <!-- Footer Section -->
+    
+    <footer class="bg-dark text-light mt-4">
+        
+        <!-- Container Fluid For Footer gives margin inside the footer. Footer Must be cover full page size. -->
+        <div class="container-fluid">
+
+            <div class="row">
+
+                <!-- col 1 for Text -->
+                <div class="col text-center mt-4"> 
+                    <h5>Bannari Amman Institute Of Technology</h5>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, distinctio. Officia dolor porro eius nam ea provident, totam reiciendis rem.</p>
+                </div>
+
+                <!-- Col 2 for Links -->
+                <div class="col text-center mt-4">
+                    <h5>Quick Links</h5>
+
+                    <!-- List for All pages links -->
+                    <ul style="list-style: none;">
+
+                        <li>
+                            <a href="about.html"  style="text-decoration: none;">About</a>
+                        </li>
+                        <li>
+                            <a href="contact.html"  style="text-decoration: none;">Contact</a>
+                        </li>
+
+                    </ul>
+                </div>
+
+                <!-- col 3 for Button -->
+                <div class="col mt-4">
+                    <h5>BIT login</h5>
+                    <p>Login to our LMS portal and enjoy the greater learning experience</p>
+                    <button class="btn btn-danger">Login</button>
+                </div>
+
+            </div>
+
+
+            <!-- New Row for Coypright -->
+            <hr />
+            <div class="text-center pb-3">
+                &copy; 2025 | Bannari Amman Institute of Technology | All rights reserved
+            </div>
+
+        </div>
+
+    </footer>
+    <!-- Footer Ends -->
 
 
 </body>
