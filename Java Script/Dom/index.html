@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Practice</title>
+</head>
+<body>
+
+    <!-- Para for changing -->
+    <p id="bit">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est dicta magni nostrum cumque, sed, nulla dolorem maxime vero qui fugiat veniam atque modi, in non pariatur vitae libero culpa? Illo?
+    </p>
+
+    <!-- Image for changing -->
+    <img src="/Java Script/images/gojo.jpeg" alt="Gojo.jpeg" id="images">
+
+    <!-- P tag for showing date (Not anything inside that) -->
+    <p id="date"></p>
+    
+
+
+    <!-- Java Script Starts -->
+    <script>
+
+        // Changing Para
+        document.getElementById('bit').innerHTML = "suresh"
+
+        // Changing Image
+        document.getElementById('images').src = "/Java Script/images/sukuna.png"
+
+        // Add date and time
+        document.getElementById('date').innerHTML = Date();
+
+    </script>
+</body>
+</html>
