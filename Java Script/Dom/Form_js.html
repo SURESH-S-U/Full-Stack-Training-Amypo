@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form in js</title>
+</head>
+<body>
+    
+
+    <!-- Form code -->
+
+    <form action="" onsubmit="return  validateForm()">
+        
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name">
+
+        <input type="submit">
+
+    </form>
+
+
+    <!-- Java Script Starts -->
+
+    <script>
+
+        function validateForm()
+        {
+            let name = document.getElementById('name').value;
+
+            if(name == "")
+            {
+                alert("Name Should be filled !");
+            }
+            else{ 
+                
+                // This used to create a new tag. It cant append into the  Html. So it wont show without append.
+                let new_text = document.createElement('h1');
+                new_text.innerHTML = `Welcome ${name} !`;
+
+                // This is used to append the new tag.
+                // body is the path where we need to add.
+                document.body.appendChild(new_text);
+                return false; 
+                // If we didn't add return false. The page will be reloded. so the Welcome tag will disappear instsntly.
+            }
+        }
+
+    </script>
+
+</body>
+</html>
