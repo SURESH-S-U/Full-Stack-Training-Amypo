@@ -4,11 +4,16 @@ import { BrowserRouter , Routes , Route , Link} from 'react-router-dom';
 import Home from './pages/Home';
 import About from './pages/About';
 import Contact from './pages/Contact';
+import Header from './components/Header';
+import Footer from './components/Footer';
 
 
 function App() {
   return (
     <div>
+
+      {/* Header Imported */}
+      <Header/>
 
       {/* It is Used to Navigation */}
       <BrowserRouter>
@@ -32,6 +37,10 @@ function App() {
         </Routes>
 
       </BrowserRouter>
+
+      {/* Footer Imported */}
+      <Footer/>
+
     </div>
   );
 }

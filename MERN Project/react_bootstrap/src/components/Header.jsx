@@ -1,8 +1,37 @@
 import React from 'react'
 
+
 function Header() {
   return (
-    <div>Header</div>
+    <div>
+    {/* <!-- Navbar Starts -->
+    <!-- Navbar Bring from Bootstrap website (Nav) --> */}
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">My Website</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled" aria-disabled="true">Login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    {/* <!-- Navbar Ends --> */}
+    </div>
   )
 }
 
