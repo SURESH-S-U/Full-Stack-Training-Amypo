@@ -6,6 +6,7 @@ import Login from './pages/Login';
 import Toggle from './pages/Toggle';
 import Form from './pages/Form';
 import LoginNew from './pages/LoginNew';
+import ThemeToggle from './components/ThemeToggle';
 
 function App() {
   return (
@@ -28,6 +29,9 @@ function App() {
 
       {/* New Login Page */}
       <LoginNew/>
+
+      {/* Dark Mode and Light Mode */}
+      <ThemeToggle/>
 
     </div>
   );
