@@ -1,26 +1,23 @@
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 import Home from "./pages/Home";
 import Products from "./pages/Products";
 import Services from "./pages/Services";
 import Clients from "./pages/Clients";
 import Portfolio from "./pages/Portfolio";
 
+import Page1 from "./pages/Page1";
+import Page2 from "./pages/Page2";
+import Page3 from "./pages/Page3";
+import Page4 from "./pages/Page4";
+import Page5 from "./pages/Page5";
+
+import Navbar from "./components/NavBar";
+
 function App() {
   return (
     <BrowserRouter>
-      <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div className="container">
-          <Link className="navbar-brand" to="/">MyApp</Link>
-
-          <div className="navbar-nav">
-            <Link className="nav-link" to="/">Home</Link>
-            <Link className="nav-link" to="/products">Products</Link>
-            <Link className="nav-link" to="/services">Services</Link>
-            <Link className="nav-link" to="/clients">Clients</Link>
-            <Link className="nav-link" to="/portfolio">Portfolio</Link>
-          </div>
-        </div>
-      </nav>
+      <Navbar />
 
       <Routes>
         <Route path="/" element={<Home />} />
@@ -28,6 +25,13 @@ function App() {
         <Route path="/services" element={<Services />} />
         <Route path="/clients" element={<Clients />} />
         <Route path="/portfolio" element={<Portfolio />} />
+
+        {/* Extra dropdown pages */}
+        <Route path="/page1" element={<Page1 />} />
+        <Route path="/page2" element={<Page2 />} />
+        <Route path="/page3" element={<Page3 />} />
+        <Route path="/page4" element={<Page4 />} />
+        <Route path="/page5" element={<Page5 />} />
       </Routes>
     </BrowserRouter>
   );
