@@ -9,11 +9,19 @@ function Task_3() {
 
     const themeStyle = {
         backgroundColor: isDarkMode ? '#333' : '#fff',
-        color:isDarkMode ? '#fff' : '#333',
+        color: isDarkMode ? '#fff' : '#333',
+
         minHeight: '100vh',
         padding: '20px',
-        transition: '0.7s'
-    }
+
+        display: 'flex',          // enable flexbox
+        justifyContent: 'center', // horizontal center
+        alignItems: 'center',     // vertical center
+        flexDirection: 'column',  // stack items vertically
+
+        transition: '0.7s',
+    };
+
 
     const buttonStyle = {
         padding: '10px',
