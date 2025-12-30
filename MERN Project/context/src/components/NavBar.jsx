@@ -1,8 +1,23 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { AuthContext } from '../context/AuthContext';
 
-function NavBar() {
+const NavBar = () => {
+
+    // Using Created Context
+    const {user, login , logout} = useContext(AuthContext);
+
   return (
-    <div>NavBar</div>
+    <div>
+        {user ? 
+        (<>
+        <span>Welcome {user}</span>
+        <button onClick={logout}>LogOut</button>
+        </>) 
+        : 
+        (
+            <button onClick={() => login("Suresh")}>login</button>
+        )}
+    </div>
   )
 }
 

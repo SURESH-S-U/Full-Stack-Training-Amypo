@@ -9,7 +9,7 @@ export const ThemeContext = createContext();
 const ThemeProvider = ({children}) => {
 
     // Create State
-    const [Theme , setTheme] = useState("light");
+    const [theme , setTheme] = useState("light");
 
     // Function to change the Theme.
     // If current is light - then change to dark or viceversa
@@ -21,9 +21,9 @@ const ThemeProvider = ({children}) => {
   return (
     <div>
 
-        <ThemeContextContext.Provider value={{theme , toggleTheme}}>
+        <ThemeContext.Provider value={{theme , toggleTheme}}>
             {children}      {/* All wrapped components can aceess */}
-        </ThemeContextContext.Provider>
+        </ThemeContext.Provider>
 
     </div>
   )

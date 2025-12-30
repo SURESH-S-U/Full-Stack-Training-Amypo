@@ -1,8 +1,13 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { ThemeContext } from '../context/ThemeContext';
 
-function Home() {
+const Home = () => {
+  const {theme,toggleTheme} =useContext(ThemeContext);
   return (
-    <div>Home</div>
+    <div className='{theme}'>
+        <button onClick={toggleTheme}>Toggle Theme</button>
+        <span>{theme.toUpperCase()} Mode</span>
+    </div>
   )
 }
 

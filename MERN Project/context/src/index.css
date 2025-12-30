@@ -11,3 +11,17 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+  .light{
+  background-color: #fff;
+  color: #333;
+  min-height: 100vh;
+  padding: 20px;
+  }
+
+  .dark{
+  background-color:#333;
+  color:#fff;
+  min-height: 100vh;
+  padding: 20px;
+  }
