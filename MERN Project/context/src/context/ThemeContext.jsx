@@ -1,9 +1,32 @@
-import React from 'react'
+import { createContext, useState } from "react";
 
-function ThemeContext() {
+
+// Create context
+export const ThemeContext = createContext();
+
+
+
+const ThemeProvider = ({children}) => {
+
+    // Create State
+    const [Theme , setTheme] = useState("light");
+
+    // Function to change the Theme.
+    // If current is light - then change to dark or viceversa
+
+    const toggleTheme = () => {
+        setTheme(theme === "light" ? "dark" : "light");
+    }
+
   return (
-    <div>ThemeContext</div>
+    <div>
+
+        <ThemeContextContext.Provider value={{theme , toggleTheme}}>
+            {children}      {/* All wrapped components can aceess */}
+        </ThemeContextContext.Provider>
+
+    </div>
   )
 }
 
-export default ThemeContext
+export default ThemeProvider
