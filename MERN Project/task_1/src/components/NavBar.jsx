@@ -16,6 +16,7 @@ function Navbar() {
             <Link className="nav-link" to="/services">Services</Link>
             <Link className="nav-link" to="/clients">Clients</Link>
             <Link className="nav-link" to="/portfolio">Portfolio</Link>
+            <Link className="nav-link" to="/News">News</Link>
 
             {/* DROPDOWN — only for extra pages */}
             <div className="nav-item dropdown">
