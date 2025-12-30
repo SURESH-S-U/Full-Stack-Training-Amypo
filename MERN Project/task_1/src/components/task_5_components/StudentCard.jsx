@@ -1,6 +1,6 @@
 function StudentCard(props) {
   return (
-    <div style={{ border: "2px solid black", padding: "15px", marginTop: "20px" }}>
+    <div style={{ border: "2px solid black", padding: "15px", marginTop: "20px"}}>
       <p><b>Name:</b> {props.name}</p>
       <p><b>Register No:</b> {props.regno}</p>
       <p><b>CGPA:</b> {props.cgpa}</p>

@@ -13,7 +13,7 @@ function StudentCard_App() {
   }
 
   return (
-    <div style={{ padding: "20px" }}>
+    <div style={{ padding: "20px", display:"flex", flexDirection:"column", alignItems:"center"}}>
       <h2>Student Form</h2>
 
       <form onSubmit={handleSubmit}>
