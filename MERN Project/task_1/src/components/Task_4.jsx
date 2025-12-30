@@ -10,6 +10,7 @@ import Cards from './task_4_components/Cards';
 
 function Task_4() {
   return (
+    <div>
     <Container className="mt-5">
       
       <h1>Task 4 - Components</h1>
@@ -37,6 +38,7 @@ function Task_4() {
       <Forms />
 
     </Container>
+    </div>
   );
 }
 

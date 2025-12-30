@@ -6,14 +6,14 @@ function Task_2() {
   const pageStyle = {
     minHeight: "100vh",
     padding: "20px",
-    backgroundColor: "#f3f4f6",
+    backgroundColor: "#5bd7c9ff",
     display: "flex",
     justifyContent: "center",
     alignItems: "center"
   };
 
   const cardStyle = {
-    backgroundColor: "#ffffff",
+    backgroundColor: "#eef5f3ff",
     width: "320px",
     padding: "24px",
     borderRadius: "12px",
