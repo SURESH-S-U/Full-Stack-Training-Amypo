@@ -9,7 +9,7 @@ import Products from "./pages/Products";
 import Services from "./pages/Services";
 import Clients from "./pages/Clients";
 import Portfolio from "./pages/Portfolio";
-import News from "./pages/News";
+import NewsApp from "./pages/NewsApp";
 
 // Task Components
 import Task_2 from "./components/Task_2";
@@ -28,7 +28,7 @@ function App() {
         <Route path="/services" element={<Services />} />
         <Route path="/clients" element={<Clients />} />
         <Route path="/portfolio" element={<Portfolio />} />
-        <Route path="/News" element={<News />} />
+        <Route path="/NewsApp" element={<NewsApp />} />
 
         {/* Extra dropdown pages */}
         <Route path="/page1" element={<Task_2 />} />
