@@ -1,23 +1,22 @@
 import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react';
+import Product from './components/Product';
+import CartSummary from './components/CartSummary';
 
 function App() {
+
+  // Create a state
+  const [count , setCount] = useState(0);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      
+      <Product count={count} setCount={setCount} />
+
+      {/* The final Updated value will  be get form the CartSummary */}
+      <CartSummary count={count}/>
+
     </div>
   );
 }
