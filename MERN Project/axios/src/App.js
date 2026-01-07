@@ -6,10 +6,8 @@ import Comments from './components/Comments';
 function App() {
   return (
     <div className="App">
-      
-      <Posts/>
-      <Comments/>
-
+      <Posts />
+      <Comments />
     </div>
   );
 }
