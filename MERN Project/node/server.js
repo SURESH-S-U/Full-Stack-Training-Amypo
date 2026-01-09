@@ -20,7 +20,7 @@ fs.readFile("data.txt", "utf-8" , (err , data) => {
         console.log("File contents : ");
         console.log(data);
     }
-})
+});
 
 // Append File - appendFile method
 fs.appendFile("data.txt", "New line Added to the file\n", (err) => {
@@ -30,4 +30,14 @@ fs.appendFile("data.txt", "New line Added to the file\n", (err) => {
     else{
         console.log("File appended.");
     }
-})
+});
+
+// Delete file - unlink method
+fs.unlink("data.txt", (err) => {
+    if(err){
+        console.log("Error in deleting file")
+    }
+    else{
+        console.log("File deleted.");
+    }
+});
