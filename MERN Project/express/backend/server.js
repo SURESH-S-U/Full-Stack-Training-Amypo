@@ -68,7 +68,7 @@ app.put("/posts/:id",(req,res) => {
 
     //Get the POST ID from URL and convert that to no
     const postId = Number(req.params.id);
-    
+
     //Update the matching post
     data.posts = data.posts.map(p =>
         p.id === postId ? { ...p, ...req.body } : p
@@ -77,6 +77,27 @@ app.put("/posts/:id",(req,res) => {
     writeData(data);
     res.json({message: "Post Updated"});
 });
+
+
+
+// Delete Method to remove a post
+app.delete("/posts/:id", (req, res) => {
+    // Read existing data
+    const data = readData();
+
+    // Get ID from URL and convert to number
+    const postId = Number(req.params.id);
+
+    // Filter out the post to be deleted
+    data.posts = data.posts.filter(p => p.id !== postId);
+
+    // Save updated data to JSON
+    writeData(data);
+
+    // Send response
+    res.json({ message: "Post Deleted Successfully" });
+});
+
 
 
 

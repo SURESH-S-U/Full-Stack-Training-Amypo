@@ -29,77 +29,11 @@
       "phone": "987654321"
     },
     {
-      "id": 5,
-      "name": "Thiru",
-      "dept": "AI",
-      "email": "Thiru@gmail.com",
-      "phone": "987654321"
-    },
-    {
-      "id": 6,
-      "name": "Ganesh",
-      "dept": "AI",
-      "email": "Ganesh@gmail.com",
-      "phone": "987654321"
-    },
-    {
-      "id": 7,
-      "name": "Sharan",
-      "dept": "AI",
-      "email": "Sharan@gmail.com",
-      "phone": "987654321"
-    },
-    {
-      "id": "8",
-      "name": "veera",
-      "dept": "1234567890",
-      "email": "veera@gmail.com"
-    },
-    {
-      "id": "-5521",
-      "name": "fagsa",
-      "dept": "234ui",
-      "email": "wertyu"
-    },
-    {
-      "id": 1768028100647,
-      "name": "Ajith",
-      "dept": "0987654321",
-      "email": "ajith@gmail.com"
-    },
-    {
-      "id": 1768028223311,
-      "name": "Ajith",
-      "dept": "9876543210",
-      "email": "ajith@gmail.com"
-    },
-    {
-      "id": 1768028463274,
-      "name": "Ajith",
-      "dept": "CSE",
-      "email": "Ajith@gmail.com",
-      "phone": "123456798765"
-    },
-    {
-      "id": 1768036331152,
-      "name": "Ajith",
-      "dept": "0987654321",
-      "email": "ajith@gmail.com",
-      "phone": "123456789"
-    },
-    {
-      "id": 1768036344962,
-      "name": "fagsa",
-      "dept": "234ui",
-      "email": "wertyu",
-      "phone": "1234567"
-    },
-    {
-      "id": 1768036662354,
-      "name": ",hjSSF",
-      "dept": "khhafkdaef",
-      "email": "62i34217354vkahshfdasd",
-      "phone": "45678"
+      "id": 1768040384232,
+      "name": "Dinesh",
+      "dept": "AIDS",
+      "email": "dinesh@gmail.com",
+      "phone": "345678"
     }
   ]
 }

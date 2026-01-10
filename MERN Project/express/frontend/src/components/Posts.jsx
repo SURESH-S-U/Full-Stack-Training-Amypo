@@ -89,6 +89,15 @@ function Posts() {
     }
 
 
+    // Delete POST - Request method
+    const deletePost = (id) => {
+        axios.delete(`${API_URL}/${id}`)
+        .then(() => {
+            setPosts(posts.filter(p => p.id !== id));
+        });
+    };
+
+
 
 
   return (
@@ -124,7 +133,7 @@ function Posts() {
                     <td>
                         {/* Post parameter in Onclick for Select the current Post id. */}
                         <button className='btn btn-warning' onClick={() => startEdit(post)}>Edit</button>
-                        <button className='btn btn-danger'>Delete</button>
+                        <button className='btn btn-danger' onClick={() => deletePost(post.id)}>Delete</button>
                     </td>
                 </tr>
             ))
