@@ -62,3 +62,44 @@ app.post("/post" , (req , res) => {
 });
 
 
+
+
+// PUT Method - Updatethe post
+app.put("/posts/:id", (req,res) => {
+    // Read the old data
+    const data = readData();
+
+    // Get the POST ID from URL and convert that to number.
+    const postId = Number(req.params.id);
+
+    // Update the matching post
+    data.posts = data.posts.map(p => 
+        p.id === postId ? {...p , ...req.body} : p
+    );
+
+    // Save the updated to JSON
+    writeData(data);
+    res.json({message: "Post Updated"});
+});
+
+
+
+
+//Delete method delete the post
+app.delete("/posts/:id",(req,res) =>
+{
+    //read the old data
+    const data =readData();
+    //get the post id from url and convert that to no
+    const postId=Number(req.params.id);
+    //remove the post which matches the id
+    data.posts =data.posts.filter(p => p.id !==postId);
+    //Save the updated data back to json
+    writeData(data);
+    res.json({message: "Post Deleted"});
+});
+
+app.listen(PORT, () => {
+    console.log(`Server running on http://localhost:${PORT}`);
+});
+
