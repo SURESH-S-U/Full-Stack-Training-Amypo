@@ -4,6 +4,8 @@ const express = require('express');
 // To contact with MongoDB
 const mongoose = require("mongoose");
 
+const PORT = 5000;
+
 // To Encrypt the password(hash)
 const bcrypt = require("bcryptjs");
 
@@ -54,3 +56,8 @@ app.post("/register", async(req,res) => {
     });
     res.json({message: "User added Successfully"});
 })
+
+
+app.listen(PORT, () => {
+  console.log("Server running on", PORT);
+});

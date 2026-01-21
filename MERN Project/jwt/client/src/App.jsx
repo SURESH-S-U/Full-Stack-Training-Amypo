@@ -2,7 +2,7 @@ import axios from "axios";
 import { useState } from "react";
 
 // Backend Server API base URL
-const API = "http://localhost:4000";
+const API = "http://localhost:5000";
 
 
 // Main React Component
@@ -22,6 +22,7 @@ function App(){
   const register = async() => {
     // Send Form Data through Axios request
     await axios.post(`${API}/register`,form);
+    setForm({name:"", email:"", password:""})
   }
 
 
@@ -45,17 +46,18 @@ function App(){
 
       {!isLogin && ( // It is also a type of conditional rendering.
                      // It is Best When you have Only if not If else.
-          <input type="text" placeholder="Name" onChange={(e) => setForm({...form , name: e.target.value})} />
+          <input type="text" placeholder="Name" value={form.name} onChange={(e) => setForm({...form , name: e.target.value})} />
       )}
        
-      <input type="email" placeholder="Enter Email" onChange={(e) => setForm({...form, email: e.target.value})} />
+      {/* Required field wont work here. Because it will only work inside the Form tag. */}
+      <input type="email" placeholder="Enter Email" value={form.email} required onChange={(e) => setForm({...form, email: e.target.value})} />
 
-      <input type="password" placeholder="Password" onChange={(e) => setForm({...form, password: e.target.value})} />
+      <input type="password" placeholder="Password" value={form.password} required onChange={(e) => setForm({...form, password: e.target.value})} />
 
       {isLogin ?
         (<button>Login</button>)
         :
-        (<button>Register</button>)
+        (<button onClick={register}>Register</button>)
       }
 
       <p onClick={() => setIsLogin(!isLogin)} style={{cursor:"pointer"}}>
