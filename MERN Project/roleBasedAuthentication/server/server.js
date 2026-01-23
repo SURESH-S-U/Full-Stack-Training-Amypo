@@ -33,6 +33,18 @@ const User = mongoose.model(
 
 
 
+// JWT Token Creator
+const makeToken = (user) => {
+    return jwt.sign(
+
+        {id: user._id, role: user.role},
+        SECRET,
+        {expiresIn: "1hr"}
+    );
+}
+
+
+
 // Post Request for - Register
 app.post("/register", async(req,res) => {
     try{
@@ -64,6 +76,42 @@ app.post("/register", async(req,res) => {
     }
 
 });
+
+
+
+
+// POST Request for - Login
+app.post("/login" , async(req , res) => {
+    
+    try{
+        const {email , password} = req.body;
+
+        // Find Email
+        const user = await User.findOne({email});
+        if(!user){
+            return res.status(400).json({message: "User not found"});
+        }
+
+        // Check the Password
+        const ok = await bcrypt.compare(password, user.password);
+        if(!ok){
+            return res.status(400).json({message: "Invalid password"});
+        }
+
+        res.json({
+            message: "login Successful",
+            token: makeToken(user),
+            role: user.role
+        });
+    }
+
+    catch(err){
+        res.status(500).json({message: err.message});
+    }
+
+});
+
+
 
 
 app.listen(API , () => console.log(`Server running on http://localhost: ${API}`));
