@@ -1,123 +1,123 @@
+//Import necessary libraries
 const express = require("express");
-const cors = require("cors");
 const mongoose = require("mongoose");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
+const cors = require("cors");
 
-const API = 5000;
 
+//Create server using express
 const app = express();
-
 app.use(express.json());
 app.use(cors());
 
-// JWT secret key.
-const SECRET = "jwtsecret"; // JWT Secret key used to sign in and verify token.
+//JWT Secret Key
+const SECRET = "jwtsecret"; //JWT Secret key used to sign in and verify token
 
-// MongoDB Connection
-mongoose.connect("mongodb://127.0.0.1:27017/roleAuthDB")
+//MongoDB Connection
+mongoose.connect("mongodb://127.0.0.1:27017/roleDB")
 .then(() => console.log("MongoDB Connected"))
-.catch((err) => console.log("MongoDB Error : "+err));
+.catch((err) => console.log("MongoDB Error:", err));
 
-// MonoDB Model
-// Model Should have 3 parameters. ModelName(local) , Schema , Actual Collection name in DB.
+//MongoDB Model
 const User = mongoose.model(
     "User",
     new mongoose.Schema({
         name: String,
-        email: {type:String, unique: true},
+        email: {type: String, unique: true}, // Prevents Duplicate Email ID
         password: String,
         role: {type: String, default: "user"}
     })
-);
+ );
 
-
-
-// JWT Token Creator
-const makeToken = (user) => {
+ //JWT Token Creator
+ const makeToken = (user) => {
     return jwt.sign(
-
         {id: user._id, role: user.role},
         SECRET,
-        {expiresIn: "1hr"}
+        {expiresIn: "1h"}
     );
+ }
+ const verifyToken = async(req,res,next)=>{
+    const header = req.headers.authorization;
+    if(!header || !header.startsWith("Bearer ")){
+        return res.status(401).json({message:"No Token Found"})
+    }
+    const token = header.split(" ")[1];
+    try{
+        const decode = jwt.verify(token,SECRET);
+        req.user = decode // login user data request {id,role}
+        next();
+    }
+    catch(e){
+        res.status(401).json({message:"Invalid Token"})
+    }
+}
+//middleware:Admin check
+const isAdmin = (req,res,next)=>{
+    if(req.user.role !== "admin"){
+        return res.status(403).json({message:"Admin Only"})
+    }
+    next();
 }
 
-
-
-// Post Request for - Register
-app.post("/register", async(req,res) => {
+ //POST Request for - Register
+ app.post("/register", async(req, res) => {
     try{
-
-        const {name, email, password, role}= req.body;
-
+        const {name, email, password, role} = req.body;
+        
         //Check Validation
-        if(!name || !email || !password)
-        {
-            return res.status(400).json({message: "All fields are required"});
+        if(!name || !email || !password) {
+            return res.status(400).json({message: "All fields are required."});
         }
 
         //Email Duplicates Check
         const exists = await User.findOne({email});
-        if(exists) return res.status(400).json({message:"Email already registered"});
-
-        // Encrypt the password - Hash Password
+        if(exists) return res.status(400).json({message: "Email already registered."});
+        
+        //Encrypt the password - Hash Password4
         const hash = await bcrypt.hash(password, 10);
 
-        // Create user DB
-        await User.create({name, email, password: hash, role: role || "user"});
+        //Create user in DB
+        await User.create({name, email, password: hash, role: role || "user" });
 
         res.json({message: "User Registered Successfully."});
 
+    } catch(e) {
+        res.status(500).json({message: e.message});
     }
+ });
 
-    catch(err) {
-        res.status(500).json({message: err.message});
-    }
-
-});
-
-
-
-
-// POST Request for - Login
-app.post("/login" , async(req , res) => {
-    
+ //POST Request for - Login
+ app.post("/login", async(req, res) => {
     try{
-        const {email , password} = req.body;
+        const {email, password} = req.body;
 
-        // Find Email
+        //Find the email
         const user = await User.findOne({email});
-        if(!user){
-            return res.status(400).json({message: "User not found"});
-        }
+        if(!user) return res.status(400).json({message: "User not found"});
 
-        // Check the Password
+        //Check the password
         const ok = await bcrypt.compare(password, user.password);
-        if(!ok){
-            return res.status(400).json({message: "Invalid password"});
-        }
+        if(!ok) return res.status(400).json({message: "Wrong Password"});
 
         res.json({
-            message: "login Successful",
-            token: makeToken(user),
-            role: user.role
+           message: "Login Success",
+           token: makeToken(user),
+           role: user.role 
         });
+    } catch(e){
+        res.status(500).json({message: e.message});
     }
-
-    catch(err){
-        res.status(500).json({message: err.message});
-    }
-
-});
+ });
 
 
-
-// User Login access
-app.get("/profile" , verifyToken, (req,res) =>) {
-    
-};
-
-
-
-app.listen(API , () => console.log(`Server running on http://localhost: ${API}`));
+ //user login access
+ app.get("/profile",verifyToken,(req,res)=>{
+      res.json({message:"User API-Access",user:req.user});
+ })
+//admin login access
+app.get("/admin",verifyToken,isAdmin,(req,res)=>{
+    res.json({message:"Admin API-Access",user:req.user})
+})
+ app.listen(4000, () => console.log("Server is running in http://localhost:4000"));
