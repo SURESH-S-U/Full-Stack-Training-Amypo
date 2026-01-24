@@ -33,6 +33,14 @@ function App() {
     catch (err){
       setMessage(err.response?.data?.message || "Login Failed");
     }
+  };
+
+
+  const userAPI = async() => {
+    try{
+      const res = await axios.get(API + "/profile");
+      headers:{Authorization:"Bear"+token}
+    }
   }
 
 

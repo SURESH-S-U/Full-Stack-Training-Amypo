@@ -113,5 +113,11 @@ app.post("/login" , async(req , res) => {
 
 
 
+// User Login access
+app.get("/profile" , verifyToken, (req,res) =>) {
+    
+};
+
+
 
 app.listen(API , () => console.log(`Server running on http://localhost: ${API}`));
